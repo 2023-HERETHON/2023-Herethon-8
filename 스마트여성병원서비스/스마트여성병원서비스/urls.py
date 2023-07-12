@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from qnas.views import question_view, detail
+from qnas import views
+
+app_name = 'qnas'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('question/', question_view),
+    path('question/<int:question_id>/', views.detail, name='detail'),
+    path('answer/create/<int:question_id>/', views.answer_create, name='answer_create'),
 ]
