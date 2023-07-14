@@ -1,0 +1,148 @@
+#hosimg {
+  position: absolute;
+  width: 375px;
+  height: 880px;
+  left: 0px;
+  top: 0px;
+}
+
+#myhospital {
+  /* 나의 병원 */
+
+  position: absolute;
+  width: 189px;
+  height: 23px;
+  left: 443px;
+  top: 88px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#hospname {
+  /* 병원A */
+
+  position: absolute;
+  width: 639px;
+  height: 90px;
+  left: 484px;
+  top: 140px;
+
+  /* headline3 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: justify;
+
+  /* s4 */
+  color: #00e85d;
+}
+
+#scorement {
+  /* 평점 */
+
+  position: absolute;
+  width: 166px;
+  height: 23px;
+  left: 1278px;
+  top: 88px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#scorebox {
+  /* Frame 124 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+
+  position: absolute;
+  width: 250px;
+  height: 28px;
+  left: 1340px;
+  top: 146px;
+
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(0, 232, 93, 0.25);
+  border-radius: 20px;
+}
+
+#myreviewment {
+  /* 나의 리뷰 */
+
+  position: absolute;
+  width: 189px;
+  height: 23px;
+  left: 448px;
+  top: 320px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#myreviewbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  position: absolute;
+  width: 1140.79px;
+  height: 420.79px;
+  left: 493px;
+  top: 403px;
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(0, 232, 93, 0.25);
+  border-radius: 15px;
+}
+
+#reviewcontent {
+  /* 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. */
+
+  position: absolute;
+  width: 1050px;
+  height: 410px;
+  left: 41px;
+  top: 34px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: justify;
+
+  /* m3 */
+  color: #5600c2;
+}

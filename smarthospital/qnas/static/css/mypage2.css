@@ -1,0 +1,98 @@
+#qnadetail {
+  float: left;
+}
+
+#myq {
+  /* 나의 질문 */
+
+  position: absolute;
+  width: 189px;
+  height: 23px;
+  left: 443px;
+  top: 65px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#question {
+  /* 오랜 기간동안 생리를 하지 않습니다. 제 몸에 무슨 문제가 생긴걸까요? 이런 걸로 병원에 가도 되는 걸까요? */
+
+  position: absolute;
+  width: 1001px;
+  height: 122px;
+  left: 480px;
+  top: 111px;
+
+  /* headline3 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: justify;
+
+  /* s4 */
+  color: #00e85d;
+}
+
+#ansment {
+  /* 전문가 답변 */
+
+  position: absolute;
+  width: 189px;
+  height: 23px;
+  left: 448px;
+  top: 320px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#ansframe {
+  /* Frame 44 */
+
+  position: absolute;
+  width: 1200px;
+  height: 522px;
+  left: 480px;
+  top: 388px;
+
+  /* white */
+  background: #ffffff;
+  box-shadow: 0px 0px 22px 2px rgba(129, 31, 255, 0.25);
+  border-radius: 30px 30px 0px 0px;
+}
+
+#ans {
+  /* 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. 안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다. */
+
+  position: absolute;
+  width: 912px;
+  height: 410px;
+  left: 41px;
+  top: 34px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: justify;
+
+  /* m3 */
+  color: #5600c2;
+}

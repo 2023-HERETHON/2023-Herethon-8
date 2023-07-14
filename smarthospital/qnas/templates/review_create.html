@@ -1,15 +1,73 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="{% url 'index' %}">홈으로</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="{% static 'css/mypage4.css' %}" rel="stylesheet" />
+
+    <style>
+      #container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        background-color: #e3e2e2;
+      }
+
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      textarea {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        float: left;
+        font-size: 30px;
+      }
+
+      ::placeholder {
+        font-size: 20px;
+}
+    </style>
+    <link rel="stylesheet" href="/css/mypage4.css" />
+  </head>
+  <body>
     <form action="{% url 'review-create-url' request.user %}" method="post">
         {% csrf_token %}
+    <div id="container">
+      <div id="purplebord">
+        <div id="mainment">새로운 리뷰를<br />작성해주세요</div>
+      </div>
+      
+      <div id="hospname">방문한 병원명</div>
+      <select id="ansbox1" name="hospital">
+        {% for hospital in reservated_hospitals %}
+            <option value="{{ hospital.id }}">{{ hospital.name }}</option>
+        {% endfor %}
+    </select>
+      <div id="startext">별점 평가</div>
+      <div id="starscorebox">
+        <textarea style="border: none" cols="20.8" rows="1"  name="point" class="form-control" id="score"placeholder="평점을 입력해주세요 (0~5)"></textarea>
+          
+      </div>
+      <div id="contentment">내용</div>
+      <div id="ansbox2">
+        <textarea  name="content" style="border: none" cols="200" rows="8"
+          class="form-control" id="score"placeholder="리뷰를 작성해주세요"></textarea>
+          
+      </div>
+      <button type="submit">등록</button>
+    </div>
+    
+</form>
+  </body>
+</html>
+
+    <a href="{% url 'index' %}">홈으로</a>
+    <form action="{% url 'review-create-url' request.user %}" method="post">
+        
         방문한 병원명
         <select name="hospital">
             {% for hospital in reservated_hospitals %}
@@ -21,10 +79,6 @@
         <button type="submit">등록</button>
     </form>
     <a href="{% url 'mypage' request.user %}">뒤로가기</a>
-    {% if error %}
-<script>
-    alert('{{error}}')
-</script>
-{% endif %}
+
 </body>
 </html>

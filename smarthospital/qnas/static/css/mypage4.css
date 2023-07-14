@@ -1,0 +1,161 @@
+#purplebord {
+  /* Rectangle 43 */
+  float: left;
+  position: absolute;
+  width: 375px;
+  height: 999px;
+  top: -17px;
+
+  /* m2 */
+  background: #811fff;
+}
+
+#mainment {
+  /* 새로운 리뷰를 작성해주세요 */
+
+  position: absolute;
+  width: 295px;
+  height: 102px;
+  left: 45px;
+  top: 39px;
+
+  /* headline3 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+#hospname {
+  /* 방문한 병원명 */
+
+  position: absolute;
+  width: 205px;
+  height: 23px;
+  left: 433px;
+  top: 144px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#ansbox1 {
+  /* Frame 125 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 10px;
+
+  position: absolute;
+  width: 766.79px;
+  height: 60.79px;
+  left: 433px;
+  top: 203px;
+
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(0, 232, 93, 0.25);
+  border-radius: 15px;
+}
+
+#ansbox2 {
+  /* Frame 126 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  position: absolute;
+  width: 1205.79px;
+  height: 420.79px;
+  left: 433px;
+  top: 403px;
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(0, 232, 93, 0.25);
+  border-radius: 15px;
+}
+
+#startext {
+  /* 별점 평가 */
+
+  position: absolute;
+  width: 205px;
+  height: 23px;
+  left: 1243px;
+  top: 145px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#starscorebox {
+  /* Frame 124 */
+
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  left: 1293px;
+  top: 203px;
+
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(0, 232, 93, 0.25);
+  border-radius: 20px;
+}
+
+#contentment {
+  /* 내용 */
+
+  position: absolute;
+  width: 205px;
+  height: 23px;
+  left: 390px;
+  top: 341px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#successbtn {
+  /* Frame 26 */
+
+  position: absolute;
+  width: 300px;
+  height: 73px;
+  left: 1347px;
+  top: 875px;
+}
