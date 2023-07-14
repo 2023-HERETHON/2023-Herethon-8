@@ -32,14 +32,6 @@
         <td  align="center"><a href= "https://github.com/newoceanwave">이서현</a></td>
     </tr>
     <tr width="100%">
-         <td  align="center"><img src = "https://ifh.cc/g/J8FJYy.jpg" width="80px"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/Vo4n9y.png" width="100px" /></td>
-        <td  align="center"><img src = "" width="80%"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/3pJqOT.jpg" width="80px"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/KHNqkk.png" width="80%"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/ydn0yw.png" width="80px"/></td>
-    </tr>
-    <tr width="100%">
       <td  align="center"><p>기획디자인</p></td>
       <td  align="center"><p>프론트엔드</p></td>
       <td  align="center"><p>프론트엔드</p></td>
