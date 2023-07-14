@@ -116,9 +116,6 @@ virtualenv           20.17.1
 zipp                 3.6.0
 ```
 
-## ✨ 프로젝트 구조
-
-<img width="80%" src="https://ifh.cc/g/1Xnr9M.png"/>
 
 
 ### ✨ 폴더 구조
