@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질문 작성 페이지</title>
-</head>
-<body>
-    <a href="{% url 'index' %}">홈으로</a>
-    <h1>질문을 작성해주세요</h1>
-    <form action="" method="POST">{% csrf_token %}
-        <div>
-            <label for="subject">제목</label>
-            <input type='text' id="subject" placeholder="제목을 입력하세요." name="subject">
-        </div>
-        <div>
-            <label for="content">내용</label>
-            <input type="text" id="content" placeholder="질문을 작성하세요." name="content">
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+    <link href="{% static 'css/mypage3.css' %}" rel="stylesheet"/>
 
-        <button type="submit" value="POST">질문 등록</button>
-        <a href="{ url 'mypage' request.user %}"></a>
-    </form>
-</body>
+    <style>
+      #container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        background-color: #e3e2e2;
+      }
+
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      textarea {
+        padding: 10px 10px;
+        font-size: 30px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/mypage3.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="greenbord">
+        <div id="mainment">새로운 QnA를 <br />작성해주세요</div>
+      </div>
+      <div id="title">제목</div>
+        <div id="titlewr">
+          <textarea style="border: none" cols="75" rows="1"
+          class="form-control" id="titlecontent"placeholder="제목을 작성 해주세요."></textarea>
+        </div>
+      </div>
+      <div id="content">내용</div>
+      <div id="contentwr">
+        <textarea style="border: none" cols="75" rows="8"
+        class="form-control" id="maincontent"placeholder="내용을 작성 해주세요."></textarea>
+      </div>
+
+      <button id="wrsuccessbtn" onclick="location.href='mypage1.html';">
+        <div id="wrsuccessment">작성 완료하기</div>
+      </button>
+    </div>
+  </body>
 </html>
