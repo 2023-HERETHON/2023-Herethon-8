@@ -41,5 +41,215 @@
 
         
 </body>
+<<<<<<< HEAD
 </html> 
 
+=======
+</html> -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./hospital_detail.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/hospital_detail.css' %}" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="hospital_detail">
+      <div class="left-sight">
+        <div class="top-title">진료 예약</div>
+        <img class="hospital-img" src="./images/review.png" />
+        <div class="bottom-info">
+          <div class="hospital-name">병원명 A</div>
+          <div class="hospital-info">위치</div>
+          <div class="review-title">병원 리뷰</div>
+          <div class="swiper" id="my-swiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                style="
+                  background-color: #637ac6;
+                  color: #ffffff;
+                  border-radius: 10px;
+                  padding: 10px 20px;
+                  height: 150px;
+                "
+              >
+                리뷰 1
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-color: #637ac6;
+                  color: #ffffff;
+                  border-radius: 10px;
+                  padding: 10px 20px;
+                  height: 150px;
+                "
+              >
+                리뷰 2
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-color: #637ac6;
+                  color: #ffffff;
+                  border-radius: 10px;
+                  padding: 10px 20px;
+                  height: 150px;
+                "
+              >
+                리뷰 3
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-color: #637ac6;
+                  color: #ffffff;
+                  border-radius: 10px;
+                  padding: 10px 20px;
+                  height: 150px;
+                "
+              >
+                리뷰 4
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-color: #637ac6;
+                  color: #ffffff;
+                  border-radius: 10px;
+                  padding: 10px 20px;
+                  height: 150px;
+                "
+              >
+                리뷰 5
+              </div>
+              <div
+                class="swiper-slide"
+                style="
+                  background-color: #637ac6;
+                  color: #ffffff;
+                  border-radius: 10px;
+                  padding: 10px 20px;
+                  height: 150px;
+                "
+              >
+                리뷰 6
+              </div>
+            </div>
+
+            <!-- 페이징 필요시 추가 -->
+            <div class="swiper-pagination"></div>
+            <!-- 이전, 다음 버튼 필요시 추가 -->
+            <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
+            <!-- 스크롤 필요시 추가 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="right-sight"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".review-wrap").slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        });
+      });
+
+      new Swiper(".swiper", {
+        autoplay: {
+          delay: 5000,
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+      });
+    </script>
+    <div class="calendar">
+      <div class="header">
+        <div class="year-month"></div>
+        <div class="nav">
+          <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+          <button class="nav-btn go-today" onclick="goToday()">Today</button>
+          <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="days">
+          <div class="day">일</div>
+          <div class="day">월</div>
+          <div class="day">화</div>
+          <div class="day">수</div>
+          <div class="day">목</div>
+          <div class="day">금</div>
+          <div class="day">토</div>
+        </div>
+        <div class="dates">
+          <!-- 선택된 날짜를 표기하는 부분 -->
+          <div id="selectedDateWrapper">
+            <div>선택된 일자</div>
+            <div>
+              <span id="yearspan"></span>년 <span id="monthspan"></span>월
+              <span id="datespan"></span>일 <span id="dayspan"></span>요일
+            </div>
+            <div>선택된 일자</div>
+            <div>
+              <span id="yearspan2"></span>년 <span id="monthspan2"></span>월
+              <span id="datespan2"></span>일 <span id="dayspan2"></span>요일
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="time-img"><img src="./images/Group.png"/></div>
+      <button class="reserve-btn" onClick="onClick()">예약하기</button>
+
+    </div>
+    <script src="../js/index.js"></script>
+    <script>
+        function onClick() {
+            alert("예약이 완료되었습니다😊");
+        }
+    </script>
+  </body>
+</html>
+>>>>>>> e8221f12c5b25a91a8052c0e260a85f0111ab246
