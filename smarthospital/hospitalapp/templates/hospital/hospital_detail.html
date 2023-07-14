@@ -42,7 +42,6 @@
         
 </body>
 </html> -->
-
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -50,13 +49,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/hospital_detail.css" />
+    <link rel="stylesheet" href="./hospital_detail.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="{% static '../css/hospital_detail.css' %} "/>
+    <link rel="stylesheet" href="{% static 'css/hospital_detail.css' %}" />
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Document</title>
@@ -236,7 +235,16 @@
           </div>
         </div>
       </div>
+
+      <div class="time-img"><img src="./images/Group.png"/></div>
+      <button class="reserve-btn" onClick="onClick()">예약하기</button>
+
     </div>
     <script src="../js/index.js"></script>
+    <script>
+        function onClick() {
+            alert("예약이 완료되었습니다😊");
+        }
+    </script>
   </body>
 </html>
