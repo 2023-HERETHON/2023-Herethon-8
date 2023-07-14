@@ -1,0 +1,151 @@
+#greenbord {
+  /* Rectangle 43 */
+
+  position: absolute;
+  width: 375px;
+  height: 982px;
+  left: 0px;
+  top: 0px;
+
+  /* s2 */
+  background: #27ff7e;
+}
+
+#mainment {
+  /* 새로운 QnA를 작성해주세요 */
+
+  position: absolute;
+  width: 295px;
+  height: 107px;
+  left: 45px;
+  top: 39px;
+
+  /* headline3 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+
+  /* s3 */
+  color: #006026;
+}
+
+#title {
+  /* 제목 */
+
+  position: absolute;
+  width: 205px;
+  height: 23px;
+  left: 443px;
+  top: 146px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#titlewr {
+  /* Frame 44 */
+
+  position: absolute;
+  width: 1200px;
+  height: 90px;
+  left: 520px;
+  top: 208px;
+
+  /* white */
+  background: #ffffff;
+  box-shadow: 0px 0px 22px 2px rgba(129, 31, 255, 0.25);
+  border-radius: 30px 30px 0px 0px;
+}
+
+#content {
+  /* 내용 */
+
+  position: absolute;
+  width: 150px;
+  height: 23px;
+  left: 533px;
+  top: 330px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+#contentwr {
+  /* Frame 44 */
+
+  position: absolute;
+  width: 1200px;
+  height: 390px;
+  left: 520px;
+  top: 390px;
+
+  /* white */
+  background: #ffffff;
+  box-shadow: 0px 0px 22px 2px rgba(129, 31, 255, 0.25);
+  border-radius: 30px 30px 0px 0px;
+}
+
+#wrsuccessbtn {
+  /* Frame 26 */
+
+  position: absolute;
+  width: 361px;
+  height: 63px;
+  left: 1360px;
+  top: 816px;
+
+  /* m2 */
+  background: #811fff;
+  /* shadow */
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
+}
+
+#wrsuccessment {
+  /* 작성 완료하기 */
+
+  position: absolute;
+  width: 156px;
+  height: 14px;
+  left: 103px;
+  top: 25px;
+
+  /* headline1 */
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* white */
+  color: #ffffff;
+}
+
+#titlecontent {
+  position: relative;
+  float: left;
+}
+
+#maincontent {
+  position: relative;
+  float: left;
+}
