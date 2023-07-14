@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
@@ -14,8 +14,8 @@
         {% if doctor %}
             의사 : {{doctor}} 답변횟수 : {{doctor.total_posts}}
             <br>의사설명 : {{doctor.comment}}
-            {% if doctor.doctor_picture %}  <!--템플릿 안에서 조건문-->
-            <img src="{{doctor.doctor_picture.url}}"><!--의사프로필--><br>
+            {% if doctor.doctor_picture %}  템플릿 안에서 조건문
+            <img src="{{doctor.doctor_picture.url}}"> 의사프로필<br>
            
                 {% else %}
                     <img  src="http://via.placeholder.com/100x100" alt="">
@@ -25,7 +25,7 @@
         {% else %}
         의사 답변없음
         {% endif %}
-        
+    
 
 
     </div>
@@ -42,4 +42,123 @@
     <a href="{% url 'mypage' request.user %}">돌아가기</a>
     <a href="{% url 'index' %}">홈으로</a>
     </body>
+</html> -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        background-color: #fffcfc;
+      }
+
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/mypage2.css' %}" />
+  </head>
+  <body>
+    <div id="container">
+
+      
+  
+
+  {% if doctor %}
+      <div id="leftframe">
+        {% if doctor.doctor_picture %}
+        <img
+        src="http://via.placeholder.com/100x100"
+          id="docimg"
+          style="position: absolute"
+        />
+        {% else %}
+        <img
+        src="http://via.placeholder.com/100x100"
+          id="docimg"
+          style="position: absolute"
+        />
+        {% endif %}
+        <span
+          id="toptitle"
+          style="
+            position: absolute;
+            width: 11.8125rem;
+            height: 1.4375rem;
+            flex-shrink: 0;
+            left: 1%;
+            top: 2.5%;
+            color: #000;
+          "
+          >QnA 상세 답변
+
+          <div
+            id="greenbox"
+            style="position: absolute; left: -11.5%; top: 2950%"
+          >
+            <div
+              id="doctorname"
+              style="position: absolute; left: 15%; top: 25%"
+            >
+            {{doctor}}
+            </div>
+
+            <div id="dochosp" style="position: absolute; left: 0%; top: 45%">
+                {{doctor.comment}}
+            </div>
+
+            <div
+              id="helpscore"
+              style="position: absolute; left: -8.5%; top: 60%"
+            >
+            답변횟수 : {{doctor.total_posts}}
+            </div>
+          </div>
+        </span>
+      </div>
+      {% else %}
+  의사 답변없음
+  {% endif %}
+
+      <div id="myq">나의 질문</div>
+      <div id="question">
+        오랜 기간동안 생리를 하지 않습니다. 제 몸에 무슨 문제가 생긴걸까요? 이런
+        걸로 병원에 가도 되는 걸까요?
+      </div>
+      <div id="ansment">전문가 답변</div>
+      <div id="ansframe">
+        <div id="ans">
+          안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에
+          대한 답변은 다음과 같습니다.<br /><br />안녕하세요. 질문자님,
+          00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과
+          같습니다.<br /><br />
+          안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에
+          대한 답변은 다음과 같습니다. <br /><br />안녕하세요. 질문자님,
+          00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과
+          같습니다.
+        </div>
+      </div>
+    </div>
+  </body>
+  {% if request.user.is_doctor and not answer.writer%}
+  <form action="{% url 'answer_create' question.id %}" method="post">
+      {% csrf_token %}
+      <textarea name="content" id="content" rows="15"></textarea>
+      <input type="submit" value="답변 등록">
+  </form> 
+    
+  {% endif %}
 </html>
