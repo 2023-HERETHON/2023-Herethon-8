@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<body>
+    <h1>로그인</h1>   
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+        <div>
+            {{form.as_ul}}
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    계정이없으신가요
+    <a href="{% url 'accounts:signup' %}">회원가입</a>
+</body>
+</html>

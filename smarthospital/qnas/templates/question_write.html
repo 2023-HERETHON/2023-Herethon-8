@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문 작성 페이지</title>
+</head>
+<body>
+    <a href="{% url 'index' %}">홈으로</a>
+    <h1>질문을 작성해주세요</h1>
+    <form action="" method="POST">{% csrf_token %}
+        <div>
+            <label for="subject">제목</label>
+            <input type='text' id="subject" placeholder="제목을 입력하세요." name="subject">
+        </div>
+        <div>
+            <label for="content">내용</label>
+            <input type="text" id="content" placeholder="질문을 작성하세요." name="content">
+        </div>
+
+        <button type="submit" value="POST">질문 등록</button>
+        <a href="{ url 'mypage' request.user %}"></a>
+    </form>
+</body>
+</html>
