@@ -67,22 +67,4 @@
   </body>
 </html>
 
-    <a href="{% url 'index' %}">홈으로</a>
-    <form action="{% url 'review-create-url' request.user %}" method="post">
-        
-        방문한 병원명
-        <select name="hospital">
-            {% for hospital in reservated_hospitals %}
-                <option value="{{ hospital.id }}">{{ hospital.name }}</option>
-            {% endfor %}
-        </select>
-        평점<input type="number" name="point" min="0" max="5"><br>
-        내용<textarea name="content" name="content"></textarea><br>
-        <button type="submit">등록</button>
-    </form>
-    <a href="{% url 'mypage' request.user %}">뒤로가기</a>
-
-
-</body>
-</html>
 
