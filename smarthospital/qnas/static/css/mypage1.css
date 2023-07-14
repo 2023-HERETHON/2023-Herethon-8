@@ -30,6 +30,7 @@
   right: 100px;
 }
 
+<<<<<<< HEAD
 .top-content{
   margin-top: 100px;
 }
@@ -78,3 +79,67 @@
   font-size:20px;
   padding: 5px 0px;
 }
+=======
+#qnalistbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 10px;
+
+  position: absolute;
+  width: 1266.79px;
+  height: 200.79px;
+  left: 273px;
+  top: 223px;
+
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(0, 232, 93, 0.25);
+  border-radius: 15px;
+  /* Frame 125 */
+}
+
+#reviewlistbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 10px;
+
+  position: absolute;
+  width: 1266.79px;
+  height: 200.79px;
+  left: 273px;
+  top: 563px;
+
+  /* white */
+  background: #ffffff;
+  /* highlight4 */
+  box-shadow: 0px 0px 22px 2px rgba(129, 31, 255, 0.25);
+  border-radius: 15px;
+  /* Frame 125 */
+}
+
+#detailbtn {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-bar {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff;
+}
+
+.card-bar::-webkit-scrollbar {
+  width: 8px;
+}
+>>>>>>> a6c47adf58fb07b7a52ec9d95c738c8f06fc39a1
