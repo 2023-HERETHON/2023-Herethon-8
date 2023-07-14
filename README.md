@@ -51,9 +51,9 @@
       <td  align="center"><p>기획디자인</p></td>
       <td  align="center"><p>프론트엔드</p></td>
       <td  align="center"><p>프론트엔드</p></td>
-     <td  align="center">지도, 예약, 리뷰 작성</td>
+     <td  align="center">지도, 예약, 리뷰 작성, 마이페이지</td>
       <td  align="center">마이페이지</td>
-      <td  align="center">q&a 작성</td>
+      <td  align="center">q&a 작성, q&a 디테일</td>
    </tr>
 </table>
 
