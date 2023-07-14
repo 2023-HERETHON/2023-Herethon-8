@@ -6,6 +6,72 @@
   top: 0px;
 }
 
+#leftframe {
+  width: 378px;
+  height: 982px;
+  flex-shrink: 0;
+
+  background: #ffffff;
+}
+
+#toptitle {
+  width: 189px;
+  height: 23px;
+  flex-shrink: 0;
+
+  color: var(--white, #fff);
+  /* headline1 */
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#hospitalimg {
+  width: 375px;
+  height: 775px;
+  flex-shrink: 0;
+
+  left: 0%;
+  top: 0%;
+}
+
+#purplebox {
+  width: 375px;
+  height: 213px;
+  flex-shrink: 0;
+
+  top: 80%;
+  border-radius: 20px 20px 0px 0px;
+  background: var(--m-2, #811fff);
+}
+
+#hospitalname {
+  width: 215px;
+  height: 49px;
+  flex-shrink: 0;
+  color: var(--white, #fff);
+  /* headline3 */
+  font-family: Pretendard;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0%; /* 0px */
+}
+
+#address {
+  width: 312px;
+  height: 23px;
+  flex-shrink: 0;
+  color: var(--white, #fff);
+  /* subtitle1 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 #myhospital {
   /* 나의 병원 */
 
@@ -116,7 +182,7 @@
 
   position: absolute;
   width: 1140.79px;
-  height: 420.79px;
+  height: 550.79px;
   left: 493px;
   top: 403px;
   /* white */

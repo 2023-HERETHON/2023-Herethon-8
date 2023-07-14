@@ -2,6 +2,85 @@
   float: left;
 }
 
+#leftframe {
+  width: 378px;
+  height: 982px;
+  flex-shrink: 0;
+
+  background: #ffffff;
+}
+
+#toptitle {
+  width: 189px;
+  height: 23px;
+  flex-shrink: 0;
+
+  color: #000;
+  /* headline1 */
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#docimg {
+  width: 378px;
+  height: 865px;
+
+  left: 0%;
+  top: 0%;
+}
+
+#greenbox {
+  width: 378px;
+  height: 213px;
+  flex-shrink: 0;
+
+  border-radius: 20px 20px 0px 0px;
+  background: var(--s-2, #27ff7e);
+}
+
+#doctorname {
+  width: 215px;
+  height: 49px;
+  flex-shrink: 0;
+  color: var(--s-3, #006026);
+  /* headline3 */
+  font-family: Pretendard;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0%; /* 0px */
+}
+
+#dochosp {
+  width: 312px;
+  height: 23px;
+  flex-shrink: 0;
+  color: var(--s-3, #006026);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#helpscore {
+  display: flex;
+  width: 312px;
+  height: 23px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: var(--m-2, #811fff);
+  /* headline */
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 #myq {
   /* 나의 질문 */
 
