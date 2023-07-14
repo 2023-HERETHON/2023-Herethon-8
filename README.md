@@ -1,7 +1,4 @@
-## 🏥2023 여기톤 team 8 (서비스명)🏥
-
-### ✨ 프로젝트 소개
-![녹화_2022_09_04_14_58_28_581](https://user-images.githubusercontent.com/81161750/190840295-06e42c1c-7059-463a-bcb5-556c5f79be17.gif)
+## 🏥2023 여기톤 team 8 "WELLNEVE"🏥
 
 
 2023 여기톤의 주제 중 하나인 "여성을 위한" 서비스, 여성 병원 전문 서비스를 제작했습니다
@@ -11,8 +8,6 @@
 더불어 내 몸이 보내는 작은 여성 질환 신호라도 <br/>
 언제나 의료 전문가에게 물어볼 수 있는 "1:1 전문가 QnA를 제공합니다.
 
-✨ [사이트 바로가기 - 배포용](https://rewha2022.com/) <br>
-✨ [사이트 바로가기 - 서버x, 아카이빙 용](https://rewha.swygbro.com/)
 
 ### ✨ 기능
 **(서비스명)**가 제공하는 기능은 다음과 같습니다.
@@ -37,14 +32,6 @@
         <td  align="center"><a href= "https://github.com/newoceanwave">이서현</a></td>
     </tr>
     <tr width="100%">
-         <td  align="center"><img src = "https://ifh.cc/g/J8FJYy.jpg" width="80px"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/Vo4n9y.png" width="100px" /></td>
-        <td  align="center"><img src = "" width="80%"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/3pJqOT.jpg" width="80px"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/KHNqkk.png" width="80%"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/ydn0yw.png" width="80px"/></td>
-    </tr>
-    <tr width="100%">
       <td  align="center"><p>기획디자인</p></td>
       <td  align="center"><p>프론트엔드</p></td>
       <td  align="center"><p>프론트엔드</p></td>
@@ -52,31 +39,30 @@
       <td  align="center">백엔드</td>
       <td  align="center">백엔드</td>
    </tr>
+        <tr width="100%">
+      <td  align="center"><p>웹디자인, 브랜딩, 발표</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+     <td  align="center">지도, 예약, 리뷰 작성, 마이페이지</td>
+      <td  align="center">마이페이지</td>
+      <td  align="center">q&a 작성, q&a 디테일</td>
+   </tr>
 </table>
 
 ### 개발 기간
 
-- 퍼블리싱 : 2022.08.26 
-- 기능 구현과 API 연결 : 2022.09.05
-- 알파 테스트 : 2022.09.08
-- 사이트 공개 : 2023.07.14
+- 2023.07.11 ~ 2023.07.15
 
 <br/>
 
-## ✨ 프로젝트 시작
-```
-git clone https://github.com/EWHA-LIKELION/10th-Ewha-Festival-Front.git
-npm install
-npm start
-```
+
 
 ## ✨ 기술 스택
 
-- Frontend : <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/ReduxToolkit-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/ReduxPersist-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/styled_components-DB7093?style=flat-square&logo=styled-components&logoColor=white">
-- Package Manager : <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white">
-- Code Formmater : <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=React&logoColor=white">
-- ETC :
- <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Google Analytics-F7B93E?style=flat-square&logo=Google&logoColor=white">
+- 기획디자인 : 피그마
+- 프론트엔드 : HTML, CSS, JavaScript, Kakao map API
+- 백엔드 : python, django
+- ETC : git
 
 </br>
 
@@ -103,28 +89,103 @@ npm start
     "styled-components": "^5.3.5",
     "util": "^0.12.4",
     "web-vitals": "^2.1.4"
+
+asgiref              3.4.1
+distlib              0.3.6
+Django               3.2.20
+django-debug-toolbar 3.2.4
+filelock             3.4.1
+importlib-metadata   4.8.3
+importlib-resources  5.4.0
+Pillow               8.4.0
+pip                  10.0.1
+platformdirs         2.4.0
+pytz                 2023.3
+setuptools           39.0.1
+sqlparse             0.4.4
+typing-extensions    4.1.1
+virtualenv           20.17.1
+zipp                 3.6.0
 ```
 
-## ✨ 프로젝트 구조
-
-<img width="80%" src="https://ifh.cc/g/1Xnr9M.png"/>
 
 
 ### ✨ 폴더 구조
 
 ```
-📂 src
-├─ 📂 api  ▶️ api 모음
-├─ 📂 redux  ▶️ store와 Slice 파일 모음
-├─ 📂 components  ▶️ 컴포넌트
-├─ 📂 images  ▶️ svg 파일 모음
-├─ 📂 pages  ▶️ 조건에 따라 라우팅되는 페이지
-├─ 📂 styles  ▶️ 공통적으로 사용되는 스타일 값
-└─ 📂 _mock  ▶️ 샘플 데이터
+📂 2023-Herethon-8
+└─ smarthospital
+ ├─ smarthospital
+ │  ├─ __init__.py
+ │  ├─ asgi.py
+ │  ├─ settings.py
+ │  ├─ urls.py
+ │  └─ wsgi.py
+ ├─ qnas/
+ │  ├─ static
+ │  │  ├─ css/
+ │  │  │  ├─ index.css
+ │  │  │  ├─ mypage1.css
+ │  │  │  ├─ mypage2.css
+ │  │  │  ├─ mypage3.css
+ │  │  │  ├─ mypage4.css
+ │  │  │  ├─ mypage5.css
+ │  │  ├─ media/
+ │  │  │  ├─ back2.png
+ │  │  │  ├─ doctor.png
+ │  │  │  ├─ search.png
+ │  │  │  ├─ submit.png
+ │  ├─ templates/
+ │  │  ├─ mypage5.html
+ │  │  ├─ question_detail.html
+ │  │  ├─ question_list.html
+ │  │  ├─ question_write.html
+ │  │  ├─ review_create.html
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ forms.py
+ │  ├─ tests.py
+ │  └─ views.py
+ ├─ hospitalapp/
+ │  ├─ templates/
+ │  │  ├─ index.html
+ │  │  │  ├─ hospital/
+ │  │  │  │  ├─ hspital_detai.html
+ │  │  │  │  ├─ hospital_review.html
+ │  │  │  ├─ accounts/
+ │  │  │  │  ├─ login.html
+ │  │  │  │  ├─ signup_doctor.html
+ │  │  │  │  ├─ signup.html
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ forms.py
+ │  ├─ urls.py
+ │  ├─ tests.py
+ │  └─ views.py
+ ├─ accounts/
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ forms.py
+ │  ├─ tests.py
+ │  └─ views.py
+ ├─ users/
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ tests.py
+ │  └─ views.py
+ └─ manage.py
 
 ```
 
-## ✨ UI
-![image](https://user-images.githubusercontent.com/81161750/190840220-be47661c-48df-48ff-9c0a-83787e015138.png)
-![image](https://user-images.githubusercontent.com/81161750/190840232-928a4fbc-b82b-4e32-a846-39fd2e797da7.png)
 
