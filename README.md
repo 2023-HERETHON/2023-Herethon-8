@@ -108,14 +108,30 @@ npm start
 ### ✨ 폴더 구조
 
 ```
-📂 src
-├─ 📂 api  ▶️ api 모음
-├─ 📂 redux  ▶️ store와 Slice 파일 모음
-├─ 📂 components  ▶️ 컴포넌트
-├─ 📂 images  ▶️ svg 파일 모음
-├─ 📂 pages  ▶️ 조건에 따라 라우팅되는 페이지
-├─ 📂 styles  ▶️ 공통적으로 사용되는 스타일 값
-└─ 📂 _mock  ▶️ 샘플 데이터
+📂 2023-Herethon-8
+└─ smarthospital
+ ├─ smarthospital
+ │  ├─ __init__.py
+ │  ├─ asgi.py
+ │  ├─ settings.py
+ │  ├─ urls.py
+ │  └─ wsgi.py
+ ├─ qnas/
+ │  ├─ static
+ │  ├─ templates
+ │  │  ├─ mypage5.html
+ │  │  ├─ mypage5.html
+ │  │  ├─ mypage5.html
+ │  │  ├─ mypage5.html
+ │  │  ├─ mypage5.html
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ tests.py
+ │  └─ views.py
+ └─ manage.py
 
 ```
 
