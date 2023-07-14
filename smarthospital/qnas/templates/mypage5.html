@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
@@ -10,10 +10,61 @@
 <body>
     {{review.hospital.name}}
     {{review.hospital.adress}}
-    <!--병원이미지-->
+    병원이미지
     <img src="{{review.hospital.image.url}}">
     {{review.comment}}
     {{review.point}}
 
 </body>
+</html> -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/mypage5.css' %}" rel="stylesheet" />
+    <style>
+      #container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        background-color: #e3e2e2;
+      }
+
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/mypage5.css" />
+  </head>
+  <body>
+    <div id="container">
+      <img src="../images/큐엔에이답변상세 (2).png" id="hosimg" />
+      <div id="myhospital">나의 병원</div>
+      <div id="hospname">병원A</div>
+      <div id="scorement">평점</div>
+      <div id="scorebox"></div>
+      <div id="myreviewment">나의 리뷰</div>
+      <div id="myreviewbox">
+        <div id="reviewcontent">
+          안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에
+          대한 답변은 다음과 같습니다.
+          <br /><br />안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문
+          해주신 내용에 대한 답변은 다음과 같습니다. <br /><br />안녕하세요.
+          질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은
+          다음과 같습니다. <br /><br />안녕하세요. 질문자님, 00산부인과 전문의
+          000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다.
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
