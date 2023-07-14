@@ -81,13 +81,13 @@
       <div id="leftframe">
         {% if doctor.doctor_picture %}
         <img
-        src="http://via.placeholder.com/100x100"
+        src="{{doctor.doctor_picture.url}}"
           id="docimg"
           style="position: absolute"
         />
         {% else %}
         <img
-        src="http://via.placeholder.com/100x100"
+        src="{% static 'media/doctor.png' %}"
           id="docimg"
           style="position: absolute"
         />
@@ -135,20 +135,12 @@
 
       <div id="myq">나의 질문</div>
       <div id="question">
-        오랜 기간동안 생리를 하지 않습니다. 제 몸에 무슨 문제가 생긴걸까요? 이런
-        걸로 병원에 가도 되는 걸까요?
+        {{question.subject}}
       </div>
       <div id="ansment">전문가 답변</div>
       <div id="ansframe">
         <div id="ans">
-          안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에
-          대한 답변은 다음과 같습니다.<br /><br />안녕하세요. 질문자님,
-          00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과
-          같습니다.<br /><br />
-          안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에
-          대한 답변은 다음과 같습니다. <br /><br />안녕하세요. 질문자님,
-          00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은 다음과
-          같습니다.
+            {{answer.content}}
         </div>
       </div>
     </div>
