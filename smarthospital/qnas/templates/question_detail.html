@@ -79,19 +79,11 @@
 
   {% if doctor %}
       <div id="leftframe">
-        {% if doctor.doctor_picture %}
-        <img
-        src="{{doctor.doctor_picture.url}}"
-          id="docimg"
-          style="position: absolute"
-        />
-        {% else %}
         <img
         src="{% static 'media/doctor.png' %}"
           id="docimg"
-          style="position: absolute"
+
         />
-        {% endif %}
         <span
           id="toptitle"
           style="
@@ -124,7 +116,7 @@
               id="helpscore"
               style="position: absolute; left: -8.5%; top: 60%"
             >
-            답변횟수 : {{doctor.total_posts}}
+            친절도 : {{doctor.total_posts}}
             </div>
           </div>
         </span>

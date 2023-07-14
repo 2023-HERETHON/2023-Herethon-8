@@ -1,0 +1,157 @@
+.main{
+    display: flex;
+    flex-direction:row;
+}
+
+.menu{
+    width:25%;
+    height:100vh;
+    background-color: #C8D9FC;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    left:0;
+    top:0;
+    margin:0;
+}
+
+.menu-title{
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.filter-wrap{
+    margin: 0 auto;
+}
+
+
+.btn-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.menu-content{
+    color: #303030;
+    font-size: 16px;
+    padding: 20px 0px;
+}
+
+.select::-ms-expand { 
+	display: none;
+}
+.select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 150px;
+  height: 35px;
+  background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 5px) center no-repeat;
+  background-size: 20px;
+  padding: 5px 30px 5px 10px;
+  border-radius: 4px;
+  outline: 0 none;
+}
+
+.select option {
+    background: black;
+    color: #fff;
+    padding: 3px 0;
+  }
+
+
+.btn-wrap-area{
+
+}
+
+.btn-area{
+    width: 150px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.btn-area:hover{
+    background-color: #91B6FF;
+    color:#ffffff
+}
+
+#map{
+    width:70%;
+    height:100vh;
+    position:absolute;
+    right:0;
+    top:0;
+    margin:0;
+    padding:0;
+}
+
+.slider {
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 50%; /* 슬라이더 길이 */
+    height: 10px; /* 슬라이더 두께 */
+    border-radius: 5px; /* 슬라이더 모서리를 약간 둥글게 */
+    background: #ffffff; /* 슬라이더 색상 */
+    outline: none; /* 슬라이더 테두리 없이 */
+}
+
+/* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀 
+(Chrome, Opera, Safari, Edge 브라우저를 위해서는 -webkit-을,
+Firefox 브라우저를 위해서는 -moz- 를 사용하세요 */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 10px; /* 슬라이더 핸들 길이 */
+    height: 20px; /* 슬라이더 핸들 높이 */
+    border-radius: 30%; /* 핸들 모양을 원모양으로 만들기 위함 */
+    background: #811FFF; /* 슬라이더 핸들 색상 */
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* 슬라이더 핸들 길이 */
+    height: 25px; /* 슬라이더 핸들 높이 */
+    border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+    background: #811FFF; /* 슬라이더 핸들 색상 */
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}
+
+.keyword{
+    position: absolute;
+    width: 500px;
+    top: 10px;
+    left: 45%;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px solid #C8D9FC;
+    outline: none;
+}
+
+.mypage-btn{
+    position: absolute;
+    font-size: 18px;
+    width: 150px;
+    height: 60px;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+    background-color: #637ac6;
+    padding: 20px;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-submit{
+    width: 80px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #91B6FF;
+    border: none;
+    font-size: #FFFFFF;
+    position: absolute;
+    right: 30px;
+}
