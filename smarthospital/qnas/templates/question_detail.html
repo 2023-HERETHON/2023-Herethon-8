@@ -44,7 +44,7 @@
     </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en">
   <head>
@@ -145,4 +145,105 @@
   </form> 
     
   {% endif %}
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        background-color: #fffcfc;
+      }
+
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/mypage2.css' %}" />
+  </head>
+  <body>
+    {% if doctor %}
+    <div id="container">
+      <!--<img src="/images/큐엔에이답변상세 (1).png" id="qnadetail" />-->
+
+      <div id="leftframe">
+        <img
+          src="{% static 'media/doctor.png' %}"
+          id="docimg"
+          style="position: absolute"
+        />
+        <span
+          id="toptitle"
+          style="
+            position: absolute;
+            width: 11.8125rem;
+            height: 1.4375rem;
+            flex-shrink: 0;
+            left: 1%;
+            top: 2.5%;
+            color: #000;
+          "
+          >QnA 상세 답변
+
+          <div
+            id="greenbox"
+            style="position: absolute; left: -11.5%; top: 2950%"
+          >
+            <div id="doctorname" style="position: absolute; left: 0%; top: 25%">
+                {{doctor}}
+            </div>
+
+            <div id="dochosp" style="position: absolute; left: 0%; top: 45%">
+                {{doctor.comment}}
+            </div>
+
+            <div
+              id="helpscore"
+              style="position: absolute; left: -8.5%; top: 60%"
+            >
+            친절도 : {{doctor.total_posts}}
+            </div>
+          </div>
+        </span>
+        {% else %}
+        의사 답변없음
+        {% endif %}
+      </div>
+
+
+      <div id="myq">제목 : {{question.subject}}</div>
+      <div id="question">
+        {{question.content}}
+      </div>
+      <div id="ansment">전문가 답변</div>
+      <div id="ansframe">
+        <div id="ans">
+            {{answer.content}}
+        </div>
+      </div>
+    </div>
+    {% if request.user.is_doctor and not answer.writer%}
+    <form action="{% url 'answer_create' question.id %}" method="post">
+        {% csrf_token %}
+        <textarea name="content" id="content" rows="15"></textarea>
+        <input type="submit" value="답변 등록">
+    </form>
+    {% elif request.user.is_doctor %}
+        이미 의사가 답변함 
+      
+    {% endif %}
+  </body>
+  
 </html>
