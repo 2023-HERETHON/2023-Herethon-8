@@ -665,7 +665,7 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
         </div>
     </form>
 
-        <button class="mypage-btn">마이페이지</button> 
+        <a href="{% url 'mypage' request.user %}"><button class="mypage-btn">마이페이지</button> </a>
         
         <div class="main-swiper">
             <div class="swiper-wrapper">
