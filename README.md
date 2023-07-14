@@ -47,6 +47,14 @@
       <td  align="center">백엔드</td>
       <td  align="center">백엔드</td>
    </tr>
+        <tr width="100%">
+      <td  align="center"><p>기획디자인</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+     <td  align="center">지도, 예약기능, 리뷰 작성기능</td>
+      <td  align="center">마이페이지</td>
+      <td  align="center">q&a 작성</td>
+   </tr>
 </table>
 
 ### 개발 기간
