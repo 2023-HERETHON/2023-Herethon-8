@@ -177,7 +177,7 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
@@ -207,6 +207,14 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
       </style>
 </head>
 <body>
+      
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ 
+
     <div id="lat" style="display:none">
         {% for hos in hospitals %}
             {{hos.latitude}},
@@ -391,7 +399,58 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
 
             </script>
         </div>
+    </div>    {% for hospital in hospitals %}
+    <a href="{% url 'hospital-detail' hospital.id %}"><h3>{{ hospital.name }}</h3></a>
+    리뷰 : {{ hospital.reviews_count }}개, 평점 : 
+    {% if hospital.average_point is None %}
+        0
+    {% else %}
+        {{ hospital.average_point|floatformat:2 }}
+    {% endif %}<br>
+    {{ hospital.adress }}
+{% empty %}
+    없음
+{% endfor %}
+    <div class="main-swiper">
+        <div class="swiper-wrapper">
+            {% for hospital in hospitals %}
+            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
+                <div class="hospital-name">{{ hospital.name }}-리뷰 : {{ hospital.reviews_count }}개, 평점 : 
+                    {% if hospital.average_point is None %}
+                        0
+                    {% else %}
+                        {{ hospital.average_point|floatformat:2 }}
+                    {% endif %}</div><div class="hospital-area">{{ hospital.adress }}</div><a href="{% url 'hospital-detail' hospital.id %}"></a><button class="show-btn">상세보기</button></div></div>
+                    {% empty %}
+                    없음
+                {% endfor %}
+        </div>
+
+        <div class="swiper-pagination"></div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+                new Swiper('.main-swiper', {
+        autoplay: {
+            delay: 5000
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        }
+    })</script>
+
+  
     {% for hospital in hospitals %}
     <a href="{% url 'hospital-detail' hospital.id %}"><h3>{{ hospital.name }}</h3></a>
     리뷰 : {{ hospital.reviews_count }}개, 평점 : 
@@ -404,5 +463,255 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
 {% empty %}
     없음
 {% endfor %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+    <!-- 추가함 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--  -->
+
+    <title>Main</title>
+</head>
+<body>
+    <div id="lat" style="display:none">
+        {% for hos in hospitals %}
+            {{hos.latitude}},
+        {% endfor %}
+    </div>
+    <div id="lng" style="display:none">
+        {% for hos in hospitals %}
+            {{hos.longtitude}},
+        {% endfor %}
+    </div>
+    <div id="name" style="display:none">
+        {% for hos in hospitals %}
+            {{hos.name}},
+        {% endfor %}
+    </div>
+    <div id="map" style="width:70%;height:100%;"></div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e59f4d4ca82146ab6bd68fbde0d4ec9f"></script>
+    <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 30 // 지도의 확대 레벨 
+        }; 
+    
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    
+    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";     
+    var imageSize = new kakao.maps.Size(24, 35); 
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
+
+    // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+    if (navigator.geolocation) {
+        
+        // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+        navigator.geolocation.getCurrentPosition(function(position) {
+            
+            var lat = position.coords.latitude, // 위도
+                lon = position.coords.longitude; // 경도
+            
+            var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+                message = '<div style="padding:5px;">현재 위치</div>'; // 인포윈도우에 표시될 내용입니다
+            
+            // 마커와 인포윈도우를 표시합니다
+            displayMarker(locPosition, message);
+                
+          });
+        
+    } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+        
+        var locPosition = new kakao.maps.LatLng(33.450701, 126.570667),    
+            message = 'geolocation을 사용할수 없어요..'
+            
+        displayMarker(locPosition, message);
+    }
+    
+    // 지도에 마커와 인포윈도우를 표시하는 함수입니다
+    function displayMarker(locPosition, message) {
+    
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({  
+            map: map, 
+            position: locPosition,
+            image:markerImage
+        }); 
+        
+        var iwContent = message, // 인포윈도우에 표시할 내용
+            iwRemoveable = true;
+    
+        // 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content : iwContent,
+            removable : iwRemoveable
+        });
+        
+        // 인포윈도우를 마커위에 표시합니다 
+        infowindow.open(map, marker);
+        
+        // 지도 중심좌표를 접속위치로 변경합니다
+        map.setCenter(locPosition);  
+        var positions=[]
+    }   
+
+    
+    var latitudes = document.getElementById('lat').innerHTML.trim().split(',');
+    var longitudes = document.getElementById('lng').innerHTML.trim().split(',');
+    var names = document.getElementById('name').innerHTML.trim().split(',');
+
+    // 마커 생성 및 지도에 표시
+    for (var i = 0; i < latitudes.length; i++) {
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: new kakao.maps.LatLng(parseFloat(latitudes[i]), parseFloat(longitudes[i])),
+            title: names[i]
+        });
+
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="padding:5px;">' + names[i] + '</div>'
+        });
+
+        kakao.maps.event.addListener(marker, 'mouseover', makeListener(infowindow, marker));
+        kakao.maps.event.addListener(marker, 'mouseout', makeunListener(infowindow, marker));
+        
+    }
+
+    // 인포윈도우 클릭 이벤트 리스너 생성
+    function makeListener(infowindow, marker) {
+        return function() {
+            infowindow.open(map, marker);
+        };
+    }
+    function makeunListener(infowindow, marker) {
+        return function() {
+            infowindow.close(map, marker);
+        };
+    }
+    </script>
+    <div class="main">
+        <div class="menu" style="width:30%; height:100vh;">
+            <div class="filter-wrap">
+                <div class="menu-title">필터링 검색</div>
+                <div class="menu-content">지역</div>
+                <form class="filter-from" method="get">
+                    <div name="where" class="btn-wrap">
+                        <button name="where" class="btn-area"  value="1">전국</button>
+                        <button  name="where" class="btn-area" value="서울특별시">서울특별시</button>
+                        <button  name="where"  class="btn-area" value="경기도">경기도</button>
+                        <button  name="where" class="btn-area" value="인천광역시">인천광역시</button>
+                        <button name="where"  class="btn-area" value="대전광역시">대전광역시</button>
+                        <button name="where"  class="btn-area" value="강원특별자치도">강원특별자치도</button>
+                        <button name="where"  class="btn-area" value="부산광역시">부산광역시</button>
+                        <button name="where"  class="btn-area" value="대구광역시">대구광역시</button>
+                        <button name="where"  class="btn-area" value="광주광역시">광주광역시</button>
+                        <button name="where"  class="btn-area" value="제주특별자치도">제주특별자치도</button>
+                        
+                        <button name="where" class="btn-area" value="울산광역시">울산광역시</button>
+                        <button name="where" class="btn-area" value="경상북도">경상북도</button>
+                        <button name="where" class="btn-area" value="경상남도">경상남도</button>
+                        
+                        <button name="where" class="btn-area" value="충청북도">충청북도</button>
+                        <button name="where" class="btn-area" value="충청남도">충청남도</button>
+                        
+                        <button name="where" class="btn-area" value="세종특별자치도">세종특별자치도</button>
+                        
+                    </div>
+                    
+                    <div class="menu-content">여성전문의</div>
+                    <button name="woman" class="btn-area" value="1">여성전문의 진료</button>
+                    
+                    <div class="menu-content">리뷰 평점</div>
+                    <div class="slidecontainer">
+                        <input name="grade" id="myRange" type="range" min="0" max="5" value="0" class="slider">
+                        <span id="value"></span>                   
+                    </div>
+
+                    <div class="menu-content">야간/휴일</div>
+                    <div class="btn-wrap">
+                        <button class="btn-area" name="all_care" value="1">전체</button>
+                        <button class="btn-area" name="night_care" value="1">야간진료</button>
+                        <button class="btn-area" name="saturday_treatement" value="1">토요일진료</button>
+                        <button class="btn-area" name="holiday_treatment" value="1">공휴일진료</button>
+                        <button class="btn-area" name="sunday_care" value="1">일요일진료</button>
+                    </div>
+
+                    <button class="btn-submit" type="submit">완료</button>
+
+                </form>
+            </div>
+        </div>
+        <form action="{% url 'index' %}" method="get">
+        <div class="search">
+            <input type="text" name="title" class="keyword" placeholder="원하는 병원 이름을 검색해주세요"></input>
+            <button type="submit" class="search-btn"><img src="{% static 'media/search.png' %}"></button>
+
+        </div>
+    </form>
+
+        <button class="mypage-btn">마이페이지</button> 
+        
+        <div class="main-swiper">
+            <div class="swiper-wrapper">
+                {% for hospital in hospitals %}
+                <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
+                    <div class="hospital-name">{{ hospital.name }}- 리뷰 : {{ hospital.reviews_count }}개, 평점 : 
+                        {% if hospital.average_point is None %}
+                            0
+                        {% else %}
+                            {{ hospital.average_point|floatformat:2 }}
+                        {% endif %}</div><div class="hospital-area">{{ hospital.adress }}</div><a href="{% url 'hospital-detail' hospital.id %}"><button class="show-btn">상세보기</button></a></div>
+{% endfor %}
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </div>
+        
+        <div id="map"></div>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c7e80ca37bdc76fbcb8355dee6c74b88"></script>
+     
+            <script>
+                new Swiper('.main-swiper', {
+        autoplay: {
+            delay: 5000
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        }
+    })
+    </script>
+            </script>
+        </div>
+    </div>
 </body>
 </html>
