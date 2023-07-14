@@ -76,7 +76,7 @@ def review_create(request, user):
         hospital = Hospital.objects.get(id=hospital_id)
         Review.objects.create(
             comment=request.POST.get('content'),
-            point=request.POST.get('point'),
+            point=int(request.POST.get('point')),
             hospital=hospital,  # Hospital 인스턴스 할당
             writer=request.user
         )

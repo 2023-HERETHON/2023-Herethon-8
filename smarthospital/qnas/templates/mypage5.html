@@ -50,19 +50,13 @@
     <div id="container">
       <img src="../images/큐엔에이답변상세 (2).png" id="hosimg" />
       <div id="myhospital">나의 병원</div>
-      <div id="hospname">병원A</div>
-      <div id="scorement">평점</div>
-      <div id="scorebox"></div>
+      <div id="hospname">{{review.hospital.name}}</div>
+      <div id="scorement">평점 </div>
+      <div id="scorebox">{{review.point}}</div>
       <div id="myreviewment">나의 리뷰</div>
       <div id="myreviewbox">
         <div id="reviewcontent">
-          안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에
-          대한 답변은 다음과 같습니다.
-          <br /><br />안녕하세요. 질문자님, 00산부인과 전문의 000입니다. 질문
-          해주신 내용에 대한 답변은 다음과 같습니다. <br /><br />안녕하세요.
-          질문자님, 00산부인과 전문의 000입니다. 질문 해주신 내용에 대한 답변은
-          다음과 같습니다. <br /><br />안녕하세요. 질문자님, 00산부인과 전문의
-          000입니다. 질문 해주신 내용에 대한 답변은 다음과 같습니다.
+            {{review.comment}}
         </div>
       </div>
     </div>
