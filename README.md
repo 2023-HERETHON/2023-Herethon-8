@@ -119,7 +119,17 @@ npm start
  ├─ qnas/
  │  ├─ static
  │  │  ├─ css/
+ │  │  │  ├─ index.css
+ │  │  │  ├─ mypage1.css
+ │  │  │  ├─ mypage2.css
+ │  │  │  ├─ mypage3.css
+ │  │  │  ├─ mypage4.css
+ │  │  │  ├─ mypage5.css
  │  │  ├─ media/
+ │  │  │  ├─ back2.png
+ │  │  │  ├─ doctor.png
+ │  │  │  ├─ search.png
+ │  │  │  ├─ submit.png
  │  ├─ templates/
  │  │  ├─ mypage5.html
  │  │  ├─ question_detail.html
@@ -149,6 +159,7 @@ npm start
  │  ├─ apps.py
  │  ├─ models.py
  │  ├─ forms.py
+ │  ├─ urls.py
  │  ├─ tests.py
  │  └─ views.py
  ├─ accounts/
