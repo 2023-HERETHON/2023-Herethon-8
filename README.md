@@ -31,7 +31,7 @@
     <tr width="100%">
         <td align="center"><a href= "https://github.com/dy6578ekdbs">정다윤</a></td>
         <td align="center"><a href= "https://github.com/aoqlsdl">김혜빈</a></td>
-        <td  align="center"><a href= "https://github.com/miinjoo">김민주</a></td>
+        <td  align="center"><a href= "https://github.com/miinjoo">오승연</a></td>
         <td  align="center"><a href= "https://github.com/529539">이서진</a></td>
         <td  align="center"><a href= "">허윤</a></td>
         <td  align="center"><a href= "https://github.com/gchaewon">이채원</a></td>
