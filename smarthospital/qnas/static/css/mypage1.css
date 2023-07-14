@@ -15,6 +15,7 @@
   background-color: #637ac6;
   padding: 20px;
   color: #ffffff;
+
   border: none;
 }
 
@@ -30,7 +31,6 @@
   right: 100px;
 }
 
-<<<<<<< HEAD
 .top-content{
   margin-top: 100px;
 }
@@ -79,7 +79,7 @@
   font-size:20px;
   padding: 5px 0px;
 }
-=======
+
 #qnalistbox {
   display: flex;
   flex-direction: column;
@@ -142,4 +142,3 @@
 .card-bar::-webkit-scrollbar {
   width: 8px;
 }
->>>>>>> a6c47adf58fb07b7a52ec9d95c738c8f06fc39a1
