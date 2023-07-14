@@ -229,7 +229,7 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
         mapOption = { 
             center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-            level: 5 // 지도의 확대 레벨 
+            level: 30 // 지도의 확대 레벨 
         }; 
     
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -332,72 +332,77 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
                 <div class="menu-title">필터링 검색</div>
                 <div class="menu-content">지역</div>
                 <form class="filter-from" method="get">
-                    <div class="btn-wrap">
-                        <button  class="btn-area"  value="0">전국</button>
-                        <button  class="btn-area" value="서울특별시">서울</button>
-                        <button   class="btn-area" value="경기도">경기</button>
-                        <button  class="btn-area" value="인천">인천</button>
-                        <button  class="btn-area" value="대전">대전</button>
-                        <button  class="btn-area" value="강원도">강원</button>
-                        <button  class="btn-area" value="부산">부산</button>
-                        <button  class="btn-area" value="대구">대구</button>
-                        <button  class="btn-area" value="광주">광주</button>
-                        <button  class="btn-area" value="제주">제주</button>
+                    <div name="where" class="btn-wrap">
+                        <button name="where" class="btn-area"  value="1">전국</button>
+                        <button  name="where" class="btn-area" value="서울특별시">서울특별시</button>
+                        <button  name="where"  class="btn-area" value="경기도">경기도</button>
+                        <button  name="where" class="btn-area" value="인천광역시">인천광역시</button>
+                        <button name="where"  class="btn-area" value="대전광역시">대전광역시</button>
+                        <button name="where"  class="btn-area" value="강원특별자치도">강원특별자치도</button>
+                        <button name="where"  class="btn-area" value="부산광역시">부산광역시</button>
+                        <button name="where"  class="btn-area" value="대구광역시">대구광역시</button>
+                        <button name="where"  class="btn-area" value="광주광역시">광주광역시</button>
+                        <button name="where"  class="btn-area" value="제주특별자치도">제주특별자치도</button>
+                        
+                        <button name="where" class="btn-area" value="울산광역시">울산광역시</button>
+                        <button name="where" class="btn-area" value="경상북도">경상북도</button>
+                        <button name="where" class="btn-area" value="경상남도">경상남도</button>
+                        
+                        <button name="where" class="btn-area" value="충청북도">충청북도</button>
+                        <button name="where" class="btn-area" value="충청남도">충청남도</button>
+                        
+                        <button name="where" class="btn-area" value="세종특별자치도">세종특별자치도</button>
+                        
                     </div>
                     
                     <div class="menu-content">여성전문의</div>
-                    <button class="btn-area" value="1">여성전문의 진료</button>
+                    <button name="woman" class="btn-area" value="1">여성전문의 진료</button>
                     
                     <div class="menu-content">리뷰 평점</div>
                     <div class="slidecontainer">
-                        <input id="myRange" type="range" min="0" max="5" value="1" class="slider">
+                        <input name="grade" id="myRange" type="range" min="0" max="5" value="0" class="slider">
                         <span id="value"></span>                   
                     </div>
 
                     <div class="menu-content">야간/휴일</div>
                     <div class="btn-wrap">
-                        <button class="btn-area" value="1">전체</button>
-                        <button class="btn-area" value="1">야간진료</button>
-                        <button class="btn-area" value="1">토요일진료</button>
-                        <button class="btn-area" value="1">공휴일진료</button>
-                        <button class="btn-area" value="1">일요일진료</button>
+                        <button class="btn-area" name="all_care" value="1">전체</button>
+                        <button class="btn-area" name="night_care" value="1">야간진료</button>
+                        <button class="btn-area" name="saturday_treatement" value="1">토요일진료</button>
+                        <button class="btn-area" name="holiday_treatment" value="1">공휴일진료</button>
+                        <button class="btn-area" name="sunday_care" value="1">일요일진료</button>
                     </div>
 
                     <button class="btn-submit" type="submit">완료</button>
+
                 </form>
             </div>
         </div>
-
         <div class="search">
-            <input type="text" class="keyword" placeholder="원하는 병원 이름을 검색해주세요"></input>
+            <input type="text" name="name" class="keyword" placeholder="원하는 병원 이름을 검색해주세요"></input>
+
         </div>
+
+
 
         <a href="{% url 'mypage' request.user %}"><button class="mypage-btn">마이페이지</button> </a>
         
-        <div id="map"></div>
-
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c7e80ca37bdc76fbcb8355dee6c74b88"></script>
-            <script>
-            var markers = [];
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-                mapOption = { 
-                    center: new kakao.maps.LatLng(37.5388492, 126.99226145), // 지도의 중심좌표
-                    level: 3 // 지도의 확대 레벨
-                };
-
-            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-            var map = new kakao.maps.Map(mapContainer, mapOption); 
-
-            var slider = document.getElementById("myRange");
-            var output = document.getElementById("value");
-            output.innerHTML = slider.value;
-
-            slider.oninput = function() {
-                output.innerHTML = this.value;
-            }
+ 
 
             </script>
         </div>
     </div>
+    {% for hospital in hospitals %}
+    <a href="{% url 'hospital-detail' hospital.id %}"><h3>{{ hospital.name }}</h3></a>
+    리뷰 : {{ hospital.reviews_count }}개, 평점 : 
+    {% if hospital.average_point is None %}
+        0
+    {% else %}
+        {{ hospital.average_point|floatformat:2 }}
+    {% endif %}<br>
+    {{ hospital.adress }}
+{% empty %}
+    없음
+{% endfor %}
 </body>
 </html>
