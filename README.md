@@ -47,6 +47,14 @@
       <td  align="center">백엔드</td>
       <td  align="center">백엔드</td>
    </tr>
+        <tr width="100%">
+      <td  align="center"><p>기획디자인</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+     <td  align="center">지도, 예약, 리뷰 작성, 마이페이지</td>
+      <td  align="center">마이페이지</td>
+      <td  align="center">q&a 작성, q&a 디테일</td>
+   </tr>
 </table>
 
 ### 개발 기간
@@ -98,6 +106,23 @@ npm start
     "styled-components": "^5.3.5",
     "util": "^0.12.4",
     "web-vitals": "^2.1.4"
+
+asgiref              3.4.1
+distlib              0.3.6
+Django               3.2.20
+django-debug-toolbar 3.2.4
+filelock             3.4.1
+importlib-metadata   4.8.3
+importlib-resources  5.4.0
+Pillow               8.4.0
+pip                  10.0.1
+platformdirs         2.4.0
+pytz                 2023.3
+setuptools           39.0.1
+sqlparse             0.4.4
+typing-extensions    4.1.1
+virtualenv           20.17.1
+zipp                 3.6.0
 ```
 
 ## ✨ 프로젝트 구조
@@ -108,14 +133,78 @@ npm start
 ### ✨ 폴더 구조
 
 ```
-📂 src
-├─ 📂 api  ▶️ api 모음
-├─ 📂 redux  ▶️ store와 Slice 파일 모음
-├─ 📂 components  ▶️ 컴포넌트
-├─ 📂 images  ▶️ svg 파일 모음
-├─ 📂 pages  ▶️ 조건에 따라 라우팅되는 페이지
-├─ 📂 styles  ▶️ 공통적으로 사용되는 스타일 값
-└─ 📂 _mock  ▶️ 샘플 데이터
+📂 2023-Herethon-8
+└─ smarthospital
+ ├─ smarthospital
+ │  ├─ __init__.py
+ │  ├─ asgi.py
+ │  ├─ settings.py
+ │  ├─ urls.py
+ │  └─ wsgi.py
+ ├─ qnas/
+ │  ├─ static
+ │  │  ├─ css/
+ │  │  │  ├─ index.css
+ │  │  │  ├─ mypage1.css
+ │  │  │  ├─ mypage2.css
+ │  │  │  ├─ mypage3.css
+ │  │  │  ├─ mypage4.css
+ │  │  │  ├─ mypage5.css
+ │  │  ├─ media/
+ │  │  │  ├─ back2.png
+ │  │  │  ├─ doctor.png
+ │  │  │  ├─ search.png
+ │  │  │  ├─ submit.png
+ │  ├─ templates/
+ │  │  ├─ mypage5.html
+ │  │  ├─ question_detail.html
+ │  │  ├─ question_list.html
+ │  │  ├─ question_write.html
+ │  │  ├─ review_create.html
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ forms.py
+ │  ├─ tests.py
+ │  └─ views.py
+ ├─ hospitalapp/
+ │  ├─ templates/
+ │  │  ├─ index.html
+ │  │  │  ├─ hospital/
+ │  │  │  │  ├─ hspital_detai.html
+ │  │  │  │  ├─ hospital_review.html
+ │  │  │  ├─ accounts/
+ │  │  │  │  ├─ login.html
+ │  │  │  │  ├─ signup_doctor.html
+ │  │  │  │  ├─ signup.html
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ forms.py
+ │  ├─ urls.py
+ │  ├─ tests.py
+ │  └─ views.py
+ ├─ accounts/
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ forms.py
+ │  ├─ tests.py
+ │  └─ views.py
+ ├─ users/
+ │  ├─ __init__.py
+ │  ├─ admin.py
+ │  ├─ apps.py
+ │  ├─ apps.py
+ │  ├─ models.py
+ │  ├─ tests.py
+ │  └─ views.py
+ └─ manage.py
 
 ```
 
