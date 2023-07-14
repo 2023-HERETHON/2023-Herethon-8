@@ -48,7 +48,7 @@
       <td  align="center">백엔드</td>
    </tr>
         <tr width="100%">
-      <td  align="center"><p>기획디자인</p></td>
+      <td  align="center"><p>웹디자인, 브랜딩, 발표</p></td>
       <td  align="center"><p>프론트엔드</p></td>
       <td  align="center"><p>프론트엔드</p></td>
      <td  align="center">지도, 예약, 리뷰 작성, 마이페이지</td>
@@ -59,27 +59,18 @@
 
 ### 개발 기간
 
-- 퍼블리싱 : 2022.08.26 
-- 기능 구현과 API 연결 : 2022.09.05
-- 알파 테스트 : 2022.09.08
-- 사이트 공개 : 2023.07.14
+- 2023.07.11 ~ 2023.07.15
 
 <br/>
 
-## ✨ 프로젝트 시작
-```
-git clone https://github.com/EWHA-LIKELION/10th-Ewha-Festival-Front.git
-npm install
-npm start
-```
+
 
 ## ✨ 기술 스택
 
-- Frontend : <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/ReduxToolkit-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/ReduxPersist-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/styled_components-DB7093?style=flat-square&logo=styled-components&logoColor=white">
-- Package Manager : <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white">
-- Code Formmater : <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=React&logoColor=white">
-- ETC :
- <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Google Analytics-F7B93E?style=flat-square&logo=Google&logoColor=white">
+- 기획디자인 : 피그마
+- 프론트엔드 : HTML, CSS, JavaScript, Kakao map API
+- 백엔드 : python, django
+- ETC : git
 
 </br>
 
