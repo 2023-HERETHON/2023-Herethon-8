@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<<<<<<< HEAD
+<!-- <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,12 +9,13 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./mypage.css" />
-
+    <link rel="stylesheet" href ="{% static 'css/mypgae1.css' %}" />
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>마이페이지1</title>
 </head>
 <body>
+<<<<<<< HEAD
   <div class="mypage">
     <button class="info-btn">병원 정보</button> 
 
@@ -41,6 +44,26 @@
       <div class="mypage-title">그동안 내가 작성한 리뷰에요</div>
       <button button class="review-btn">새로운 리뷰 생성</button>
 
+    <a href="{% url 'index' %}">홈으로</a>
+    <h1>작성한 질문 리스트</h1>
+   전체 question list 표시
+    {% if question_list %}
+        <ul>
+        {% for question in question_list %}
+        <li>
+            <a href="{% url 'question-detail' question.id %}">{{question.subject}}
+                {{question.writer}}
+                {{question.create_date}}
+                {{question.content}}</a>
+            </li>  
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>질문이 없습니다.</p>
+    {% endif %}
+
+
+
 
       <div class="main-swiper">
         <div class="swiper-wrapper">
@@ -54,6 +77,89 @@
             <div class="hospital-name">병원명 D</div><div class="hospital-star">4/5</div><div class="hospital-area">친절함</div><button class="show-btn">상세보기</button></div>
         </div>
 
+        <div class="swiper-pagination"></div>
+       </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="text/javascript">
+    new Swiper('.main-swiper', {
+      autoplay: {
+          delay: 5000
+      },
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      centeredSlides: true,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+      },
+      navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next'
+      }
+  })
+  </script>
+</body>
+</html> -->
+=======
+>>>>>>> e8221f12c5b25a91a8052c0e260a85f0111ab246
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./mypage.css" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>마이페이지1</title>
+</head>
+<body>
+  <div class="mypage">
+    <button class="info-btn">병원 정보</button> 
+
+    <div class="top-content">
+      <div class="mypage-title">나의 QnA에 답변한 전문가들의 말이에요</div>
+      <button class="qna-btn">새로운 QnA 생성</button>
+      {% if question_list %}
+      {% for question in question_list %}
+      <div class="main-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
+                <div class="hospital-name">{{question.subject}}</div><div class="hospital-area">{{question.content}}</div><a href="{% url 'question-detail' question.id %}"><button class="show-btn">자세히보기</button></a></div>
+        </div>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>질문이 없습니다.</p>
+{% endif %}
+
+        <div class="swiper-pagination"></div>
+       </div>
+
+    </div>
+
+
+    
+    <div class="bottom-content">
+      <div class="mypage-title">그동안 내가 작성한 리뷰에요</div>
+      <button button class="review-btn">새로운 리뷰 생성</button>
+
+      {% for review in reviews %}
+      <div class="main-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
+                <div class="hospital-name">{{review.hospital.name}}</div><div class="hospital-star">{{review.comment}}/5</div><div class="hospital-area">{{review.comment}}</div><a href="{% url 'mypage5' review.hospital.name review.id %}"><button class="show-btn">상세보기</button></div>
+        </div>
+        {% empty %}
+        작성한 리뷰 없음
+        {% endfor %}
         <div class="swiper-pagination"></div>
        </div>
     </div>
