@@ -1,0 +1,62 @@
+.left-sight{
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.top-title{
+    position:absolute;
+    z-index: 20;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.hospital-info{
+    padding: 0px 10px;
+    font-size: 16px;
+}
+
+.hospital-img{
+    position:absolute;
+    z-index: 10;
+    width:25%;
+    top: 0;
+    left: 0;
+}
+
+.review-title{
+    padding: 30px 10px;
+    font-size: 24px;
+}
+
+.hospital-name{
+    padding: 20px 10px 5px 10px;
+    font-size: 36px;
+}
+
+.bottom-info{
+    width:25%;
+    height:100vh;
+    background-color: #811fff;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    left: 0;
+    top:350px;
+    margin:0;
+}
+
+.swiper {
+    width: 90%;
+    justify-content: center;
+  }
+
+  
+
+.swiper-pagination{
+    display: none;
+}
+
+.top-title{
+    font-size: 30px;
+}
