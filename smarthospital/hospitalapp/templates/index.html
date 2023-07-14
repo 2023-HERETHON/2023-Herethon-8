@@ -186,6 +186,25 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <title>Main</title>
+    <style>
+        .btn-area {
+          padding: 10px 20px;
+          margin-right: 10px;
+          background-color: #eee;
+          border: none;
+          cursor: pointer;
+        }
+        .btn-area.selected {
+          background-color: #ccc;
+        }
+        .btn-submit {
+          margin-top: 10px;
+          padding: 10px 20px;
+          background-color: #eee;
+          border: none;
+          cursor: pointer;
+        }
+      </style>
 </head>
 <body>
     <div id="lat" style="display:none">

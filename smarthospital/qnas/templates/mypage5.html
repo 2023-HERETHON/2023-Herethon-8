@@ -90,7 +90,9 @@
     </style>
     <link href="{% static 'css/mypage5.css' %}" rel="stylesheet" />
   </head>
+  
   <body>
+
     <div id="container">
       <!--<img src="../images/큐엔에이답변상세 (2).png" id="hosimg" />-->
       <div id="leftframe">
@@ -113,19 +115,25 @@
           >상세 리뷰
 
           <div id="purplebox" style="position: absolute; left: 12%; top: 3150%">
+            
             <div
               id="hospitalname"
               style="position: absolute; left: -1%; top: 30%"
             >
               병원명 A
             </div>
+            
 
             <div id="address" style="position: absolute; left: -1%; top: 50%">
                 {{review.hospital.adress}}
             </div>
+
           </div>
+          
         </span>
+
       </div>
+
 
       <div id="myhospital">나의 병원</div>
       <div id="hospname">{{review.hospital.name}}</div>
@@ -137,6 +145,7 @@
             {{review.comment}}
         </div>
       </div>
+
     </div>
   </body>
 </html>
