@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-{% load static %}
+{% load static}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="{% static 'css/mypage2.css' %}" />
   </head>
   <body>
-    
     {% if doctor %}
     <div id="container">
       <!--<img src="/images/큐엔에이답변상세 (1).png" id="qnadetail" />-->
@@ -100,9 +99,7 @@
             {{answer.content}}
             {% endif %}
         </div>
-        
       </div>    
-      
       <a href="{% url 'mypage' request.user %}"><img src="{% static 'media/back2.png' %}" width="60px" height="60px" style="float:right; margin:20px"></a>
 
     </div>
