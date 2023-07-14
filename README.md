@@ -1,6 +1,6 @@
-## 💚🎉2023 여기톤 team 8 (서비스명) 🎉💚
+## 🏥2023 여기톤 team 8 (서비스명)🏥
 
-### 🎉 프로젝트 소개
+### ✨ 프로젝트 소개
 ![녹화_2022_09_04_14_58_28_581](https://user-images.githubusercontent.com/81161750/190840295-06e42c1c-7059-463a-bcb5-556c5f79be17.gif)
 
 
@@ -11,10 +11,10 @@
 더불어 내 몸이 보내는 작은 여성 질환 신호라도 <br/>
 언제나 의료 전문가에게 물어볼 수 있는 "1:1 전문가 QnA를 제공합니다.
 
-💚 [사이트 바로가기 - 배포용](https://rewha2022.com/) <br>
-💚 [사이트 바로가기 - 서버x, 아카이빙 용](https://rewha.swygbro.com/)
+✨ [사이트 바로가기 - 배포용](https://rewha2022.com/) <br>
+✨ [사이트 바로가기 - 서버x, 아카이빙 용](https://rewha.swygbro.com/)
 
-### 🎉 기능
+### ✨ 기능
 **(서비스명)**가 제공하는 기능은 다음과 같습니다.
 1. 지역, 여성 전문의 여부, 휴무여부에 따른 필터링 검색
 2. 검색한 병원에 대한 유저들의 생생한 리뷰
@@ -25,7 +25,7 @@
 <hr>
 <br>
 
-## 🎉 팀원 소개
+## ✨ 팀원 소개
 
 <table border="" cellspacing="0" cellpadding="0" width="100%">
     <tr width="100%">
@@ -63,14 +63,14 @@
 
 <br/>
 
-## 🎉 프로젝트 시작
+## ✨ 프로젝트 시작
 ```
 git clone https://github.com/EWHA-LIKELION/10th-Ewha-Festival-Front.git
 npm install
 npm start
 ```
 
-## 🎉 기술 스택
+## ✨ 기술 스택
 
 - Frontend : <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/ReduxToolkit-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/ReduxPersist-764ABC?style=flat-square&logo=Redux&logoColor=white"> <img src="https://img.shields.io/badge/styled_components-DB7093?style=flat-square&logo=styled-components&logoColor=white">
 - Package Manager : <img src="https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white">
@@ -80,7 +80,7 @@ npm start
 
 </br>
 
-## 🎉 라이브러리
+## ✨ 라이브러리
 
 ```
  "@reduxjs/toolkit": "^1.8.5",
@@ -105,12 +105,12 @@ npm start
     "web-vitals": "^2.1.4"
 ```
 
-## 🎉 프로젝트 구조
+## ✨ 프로젝트 구조
 
 <img width="80%" src="https://ifh.cc/g/1Xnr9M.png"/>
 
 
-### 🎉 폴더 구조
+### ✨ 폴더 구조
 
 ```
 📂 src
@@ -124,7 +124,7 @@ npm start
 
 ```
 
-## 🎉 UI
+## ✨ UI
 ![image](https://user-images.githubusercontent.com/81161750/190840220-be47661c-48df-48ff-9c0a-83787e015138.png)
 ![image](https://user-images.githubusercontent.com/81161750/190840232-928a4fbc-b82b-4e32-a846-39fd2e797da7.png)
 
