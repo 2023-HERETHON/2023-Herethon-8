@@ -42,7 +42,7 @@
     <div class="bottom-content">
       <div class="mypage-title">그동안 내가 작성한 리뷰에요</div>
       <button button class="review-btn">새로운 리뷰 생성</button>
-=======
+
     <a href="{% url 'index' %}">홈으로</a>
     <h1>작성한 질문 리스트</h1>
    전체 question list 표시
@@ -60,9 +60,8 @@
     {% else %}
         <p>질문이 없습니다.</p>
     {% endif %}
-    {% if not request.user.is_doctor %}
-    <a href="{% url 'question_write' %}">글 작성하기</a><br><br>
->>>>>>> a6c47adf58fb07b7a52ec9d95c738c8f06fc39a1
+
+
 
 
       <div class="main-swiper">
@@ -125,41 +124,39 @@
     <div class="top-content">
       <div class="mypage-title">나의 QnA에 답변한 전문가들의 말이에요</div>
       <button class="qna-btn">새로운 QnA 생성</button>
-
+      {% if question_list %}
+      {% for question in question_list %}
       <div class="main-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
-                <div class="hospital-name">답변 A</div><div class="hospital-area">안녕하세요, 질문자님</div><button class="show-btn">자세히보기</button></div>
-            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
-            <div class="hospital-name">답변 B</div><div class="hospital-area">안녕하세요, 00산부인과</div><button class="show-btn">자세히보기</button></div>
-            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
-            <div class="hospital-name">답변 C</div><div class="hospital-area">안녕하세요, 질문자님</div><button class="show-btn">자세히보기</button></div>
-            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
-            <div class="hospital-name">답변 D</div><div class="hospital-area">안녕하세요, 00산부인과</div><button class="show-btn">자세히보기</button></div>
+                <div class="hospital-name">{{question.subject}}</div><div class="hospital-area">{{question.content}}</div><a href="{% url 'question-detail' question.id %}"><button class="show-btn">자세히보기</button></a></div>
         </div>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>질문이 없습니다.</p>
+{% endif %}
 
         <div class="swiper-pagination"></div>
        </div>
 
     </div>
 
+
+    
     <div class="bottom-content">
       <div class="mypage-title">그동안 내가 작성한 리뷰에요</div>
       <button button class="review-btn">새로운 리뷰 생성</button>
 
-
+      {% for review in reviews %}
       <div class="main-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
-                <div class="hospital-name">병원명 A</div><div class="hospital-star">3/5</div><div class="hospital-area">친절친절해서 다시 오고 싶어요</div><button class="show-btn">상세보기</button></div>
-            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
-            <div class="hospital-name">병원명 B</div><div class="hospital-star">4/5</div><div class="hospital-area">집이랑 가까워서 좋았어요</div><button class="show-btn">상세보기</button></div>
-            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
-            <div class="hospital-name">병원명 C</div><div class="hospital-star">5/5</div><div class="hospital-area">자세한 답변 굳</div><button class="show-btn">상세보기</button></div>
-            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
-            <div class="hospital-name">병원명 D</div><div class="hospital-star">4/5</div><div class="hospital-area">친절함</div><button class="show-btn">상세보기</button></div>
+                <div class="hospital-name">{{review.hospital.name}}</div><div class="hospital-star">{{review.comment}}/5</div><div class="hospital-area">{{review.comment}}</div><a href="{% url 'mypage5' review.hospital.name review.id %}"><button class="show-btn">상세보기</button></div>
         </div>
-
+        {% empty %}
+        작성한 리뷰 없음
+        {% endfor %}
         <div class="swiper-pagination"></div>
        </div>
     </div>
