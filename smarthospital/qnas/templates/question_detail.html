@@ -179,11 +179,20 @@
       <!--<img src="/images/큐엔에이답변상세 (1).png" id="qnadetail" />-->
 
       <div id="leftframe">
+        {% if doctor.doctor_picture %}  템플릿 안에서 조건문
         <img
+        src="{{doctor.doctor_picture.url}}"
+        id="docimg"
+        style="position: absolute"
+      />
+            {% else %}
+            <img
           src="{% static 'media/doctor.png' %}"
           id="docimg"
           style="position: absolute"
         />
+            {% endif %}
+        
         <span
           id="toptitle"
           style="
@@ -213,12 +222,11 @@
               id="helpscore"
               style="position: absolute; left: -8.5%; top: 60%"
             >
-            친절도 : {{doctor.total_posts}}
+            답변 수 : {{doctor.total_posts}}
             </div>
           </div>
         </span>
-        {% else %}
-        의사 답변없음
+
         {% endif %}
       </div>
 
@@ -230,7 +238,12 @@
       <div id="ansment">전문가 답변</div>
       <div id="ansframe">
         <div id="ans">
+            {% if not doctor %}
+            전문가의 답변이 없습니다 :)
+
+            {% else %}
             {{answer.content}}
+            {% endif %}
         </div>
       </div>
     </div>

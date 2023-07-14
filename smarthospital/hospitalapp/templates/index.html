@@ -353,7 +353,7 @@ var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
             <input type="text" class="keyword" placeholder="원하는 병원 이름을 검색해주세요"></input>
         </div>
 
-        <button class="mypage-btn">마이페이지</button> 
+        <a href="{% url 'mypage' request.user %}"><button class="mypage-btn">마이페이지</button> </a>
         
         <div id="map"></div>
 
