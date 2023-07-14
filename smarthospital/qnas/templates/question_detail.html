@@ -245,7 +245,9 @@
             {{answer.content}}
             {% endif %}
         </div>
-      </div>
+      </div>    
+      <a href="{% url 'mypage' request.user %}"><img src="{% static 'media/back2.png' %}" width="60px" height="60px" style="float:right; margin:20px"></a>
+
     </div>
     {% if request.user.is_doctor and not answer.writer%}
     <form action="{% url 'answer_create' question.id %}" method="post">
