@@ -98,6 +98,23 @@ npm start
     "styled-components": "^5.3.5",
     "util": "^0.12.4",
     "web-vitals": "^2.1.4"
+
+asgiref              3.4.1
+distlib              0.3.6
+Django               3.2.20
+django-debug-toolbar 3.2.4
+filelock             3.4.1
+importlib-metadata   4.8.3
+importlib-resources  5.4.0
+Pillow               8.4.0
+pip                  10.0.1
+platformdirs         2.4.0
+pytz                 2023.3
+setuptools           39.0.1
+sqlparse             0.4.4
+typing-extensions    4.1.1
+virtualenv           20.17.1
+zipp                 3.6.0
 ```
 
 ## ✨ 프로젝트 구조
