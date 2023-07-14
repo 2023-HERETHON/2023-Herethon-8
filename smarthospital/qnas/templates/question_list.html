@@ -2,47 +2,83 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질문 페이지</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./mypage.css" />
+    <link rel="stylesheet" href ="{% static 'css/mypgae1.css' %}" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>마이페이지1</title>
 </head>
 <body>
-    <a href="{% url 'index' %}">홈으로</a>
-    <h1>작성한 질문 리스트</h1>
-    <!-- 전체 question list 표시-->
-    {% if question_list %}
-        <ul>
-        {% for question in question_list %}
-        <li>
-            <a href="{% url 'question-detail' question.id %}">{{question.subject}}
-                {{question.writer}}
-                {{question.create_date}}
-                {{question.content}}</a>
-            </li>  
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>질문이 없습니다.</p>
-    {% endif %}
-    {% if not request.user.is_doctor %}
-    <a href="{% url 'question_write' %}">글 작성하기</a><br><br>
+  <div class="mypage">
+    <button class="info-btn">병원 정보</button> 
+
+    <div class="top-content">
+      <div class="mypage-title">나의 QnA에 답변한 전문가들의 말이에요</div>
+      <button class="qna-btn">새로운 QnA 생성</button>
+
+      <div class="main-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
+                <div class="hospital-name">답변 A</div><div class="hospital-area">안녕하세요, 질문자님</div><button class="show-btn">자세히보기</button></div>
+            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
+            <div class="hospital-name">답변 B</div><div class="hospital-area">안녕하세요, 00산부인과</div><button class="show-btn">자세히보기</button></div>
+            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
+            <div class="hospital-name">답변 C</div><div class="hospital-area">안녕하세요, 질문자님</div><button class="show-btn">자세히보기</button></div>
+            <div class="swiper-slide" style="background-color: #637ac6;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
+            <div class="hospital-name">답변 D</div><div class="hospital-area">안녕하세요, 00산부인과</div><button class="show-btn">자세히보기</button></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+       </div>
+
+    </div>
+
+    <div class="bottom-content">
+      <div class="mypage-title">그동안 내가 작성한 리뷰에요</div>
+      <button button class="review-btn">새로운 리뷰 생성</button>
 
 
-{% for review in reviews %}
-병원명 : {{review.hospital.name}}<br>
-{{review.comment}}<br><br>
-<a href="{% url 'mypage5' review.hospital.name review.id %}">상세보기</a>
-{% empty %}
-작성한 리뷰 없음
-{% endfor %}
+      <div class="main-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height:150px">
+                <div class="hospital-name">병원명 A</div><div class="hospital-star">3/5</div><div class="hospital-area">친절친절해서 다시 오고 싶어요</div><button class="show-btn">상세보기</button></div>
+            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
+            <div class="hospital-name">병원명 B</div><div class="hospital-star">4/5</div><div class="hospital-area">집이랑 가까워서 좋았어요</div><button class="show-btn">상세보기</button></div>
+            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
+            <div class="hospital-name">병원명 C</div><div class="hospital-star">5/5</div><div class="hospital-area">자세한 답변 굳</div><button class="show-btn">상세보기</button></div>
+            <div class="swiper-slide" style="background-color: #91B6FF;color:#FFFFFF; border-radius: 10px; padding: 10px 20px; height: 150px">
+            <div class="hospital-name">병원명 D</div><div class="hospital-star">4/5</div><div class="hospital-area">친절함</div><button class="show-btn">상세보기</button></div>
+        </div>
 
+        <div class="swiper-pagination"></div>
+       </div>
+    </div>
+  </div>
 
-{% if reservated_hospitals.count == 0 %}
-    <a onclick="javascript:alert('예약하신 병원이 없습니다')" href="">리뷰작성하기</a>
-{% else %}
-<a  href="{% url 'review-create-url' request.user %}">리뷰작성하기</a>
-{% endif %}
-{% endif %}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="text/javascript">
+    new Swiper('.main-swiper', {
+      autoplay: {
+          delay: 5000
+      },
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      centeredSlides: true,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+      },
+      navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next'
+      }
+  })
+  </script>
 </body>
 </html>
