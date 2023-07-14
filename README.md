@@ -29,13 +29,12 @@
 
 <table border="" cellspacing="0" cellpadding="0" width="100%">
     <tr width="100%">
-        <td align="center"><a href= "https://github.com/dy6578ekdbs">정다윤</a></td>
-        <td align="center"><a href= "https://github.com/aoqlsdl">김혜빈</a></td>
+        <td align="center"><a href= "https://github.com/jihyxxg">김지형</a></td>
+        <td align="center"><a href= "https://github.com/won0324">권희원</a></td>
         <td  align="center"><a href= "https://github.com/OHseugyeon">오승연</a></td>
-        <td  align="center"><a href= "https://github.com/529539">이서진</a></td>
-        <td  align="center"><a href= "">허윤</a></td>
-        <td  align="center"><a href= "https://github.com/gchaewon">이채원</a></td>
-        <td  align="center"><a href= "https://github.com/yyeonzu">정연주</a></td>
+        <td  align="center"><a href= "https://github.com/7beunseo">김은서</a></td>
+        <td  align="center"><a href= "https://github.com/LGAIN">이가인</a></td>
+        <td  align="center"><a href= "https://github.com/newoceanwave">이서현</a></td>
     </tr>
     <tr width="100%">
          <td  align="center"><img src = "https://ifh.cc/g/J8FJYy.jpg" width="80px"/></td>
@@ -44,16 +43,14 @@
         <td  align="center"><img src = "https://ifh.cc/g/3pJqOT.jpg" width="80px"/></td>
         <td  align="center"><img src = "https://ifh.cc/g/KHNqkk.png" width="80%"/></td>
         <td  align="center"><img src = "https://ifh.cc/g/ydn0yw.png" width="80px"/></td>
-        <td  align="center"><img src = "https://ifh.cc/g/cSVQ1D.jpg" width="80px"/></td>
     </tr>
     <tr width="100%">
-      <td  align="center"><p>메인 페이지</p><p>카테고리 페이지</p><p>검색 페이지</p><p>유저인증& 로그인유지</p></td>
-      <td  align="center"><p>공지사항 작성</p><p>공지사항 수정</p></td>
-      <td  align="center"><p>마이페이지(유저/관리자)</p><p>쓰레기통 페이지</p></td>
-     <td  align="center">부스 상세 페이지</td>
-      <td  align="center">공지게시판 페이지</td>
-      <td  align="center"><p>로그인&회원가입</p><p>만든이들페이지</p><p>사이드바<p></td>
-      <td  align="center">부스 수정 및 메뉴 수정 페이지</td>
+      <td  align="center"><p>기획디자인</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+     <td  align="center">백엔드</td>
+      <td  align="center">백엔드</td>
+      <td  align="center">백엔드</td>
    </tr>
 </table>
 
